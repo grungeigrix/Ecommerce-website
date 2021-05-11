@@ -51,11 +51,11 @@
 						<br>
 						Unit Price: {{cart_item.product.price}}
 						<br>
-						Quantity: {{cart_item.product.quantity}} x {{cart_item.product.price}}
+						Quantity: {{cart_item.quantity}} x {{cart_item.product.price}}
 					<td>
 						{{cart_item.product.sub_total}}
 					</td>
-					{% if cart_item.quantity < cart_item.product_stock %}
+					{% if cart_item.quantity < cart_item.product.stock %}
 					<td>
 						<a href="{% url 'add_cart' cart_item.product.id %}">
 							<i class="material-icons cart-icon">
