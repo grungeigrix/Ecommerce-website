@@ -6,7 +6,9 @@
 	Cart
 {% endblock %}
 
-{% block content %}
+{% block content %} 
+
+	{% if not cart_items %}
 
 	<div>
 		<br>
@@ -95,7 +97,7 @@
 			</div>
 		</div>
 	</div>
-
+	{% endif %}
 
 
 
